@@ -1,0 +1,17 @@
+url: "http://jekyllthemes.github.io"
+baseurl: "/iconic-one"
+
+name: Iconic One
+description: Porting a wordpress theme, with some modifications...
+
+markdown: redcarpet
+pygments: true
+
+permalink: /:year/:month/:day/:title
+paginate: 5
+
+github: https://github.com/ashwin-kumar
+linkedin: http://www.linkedin.com/in/ashwinkumark
+google: https://plus.google.com/104488956102051410647/posts
+twitter: https://twitter.com/ashwinkumar_k
+facebook: https://www.facebook.com/

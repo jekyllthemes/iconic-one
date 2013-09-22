@@ -1,0 +1,52 @@
+---
+layout: default
+title: Your New Jekyll Site
+---
+<div id="primary" class="site-content">
+  <div id="content">
+    {% for post in paginator.posts %}
+    <article>
+      <header class="entry-header">
+        <h1 class="entry-title">
+          <a href="{{ site.baseurl }}{{ post.url }}" title="Permalink to {{ site.baseurl }}{{ post.title }}" rel="bookmark">{{ post.title }}</a>
+        </h1>
+      </header>
+      <div class="entry-content">
+        <p>
+          {{post.content}}
+        </p>
+      </div>
+      <footer class="entry-summary">
+      </footer>
+    </article>
+    {% endfor %}
+  </div>
+  <!-- Pagination links -->
+  <div class="pagination">
+    {% if paginator.previous_page %}
+    <div class="previous">
+      {% if paginator.previous_page == 1 %}
+      <a href="{{ site.baseurl }}/">Previous</a>
+      {% else %}
+      <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}">Previous</a>
+      {% endif %}
+    </div>
+    {% else %}
+    <div class="previous disabled">
+      <span>Previous</span>
+    </div>
+    {% endif %}
+
+  {% if paginator.next_page %}
+    <div class="next">
+      <a href="{{ site.baseurl }}{{ paginator.next_page_path }}">Next</a>
+    </div>
+    {% else %}
+    <div class="next disabled">
+      <span>Next</span>
+    </div>
+    {% endif %}
+  </div>
+  <div class="clear"></div>
+</div>
+

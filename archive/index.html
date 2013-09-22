@@ -1,0 +1,17 @@
+---
+layout: default
+title: Archives
+---
+<div id="primary" class="site-content" style="width: 92%;">
+  <div id="content">
+    <div class="entry-content">
+      <ul class="listing">
+        {% for post in site.posts %}
+        <li>
+          <a href="{{ site.baseurl }}{{ post.url }}" title="Permalink to {{ site.baseurl }}{{ post.title }}" rel="bookmark">{{ post.title }}</a>
+          <span>{{ post.date | date_to_string }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
